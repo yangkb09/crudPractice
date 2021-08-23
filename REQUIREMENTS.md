@@ -32,7 +32,7 @@ The requirements below are broken into separate **tiers**, which model the way w
   - [x] priority - an integer between 1 and 10
   - [x] completed - boolean value, defaults to false
   - [x] description - extremely large text
-- [ ] Robots may be associated with many projects. Likewise, projects may be associated with many robots.
+- [x] Robots may be associated with many projects. Likewise, projects may be associated with many robots.
 
 #### Seed
 - [ ] Running the seed file creates projects and robots for demonstration purposes
