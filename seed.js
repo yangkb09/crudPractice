@@ -47,7 +47,26 @@ const seed = async () => {
   try {
     await db.sync({ force: true });
 
-    // seed your database here!
+    await Promise.all(robots.map(robot => {
+      return Robot.create(robot)
+    }))
+
+    console.log(green('Robot seeding success!'))
+
+    await Promise.all(projects.map(project => {
+      return Project.create(project)
+    }));
+
+    console.log(green('Project seeding success!'))
+
+    // Assign robots to projects
+    const robotList = await Robot.findAll();
+    const projectList = await Project.findAll();
+
+    await robotList[0].addProject(projectList[2])
+    await robotList[1].addProject(projectList[2])
+    await robotList[2].addProject(projectList[1])
+    await robotList[3].addProject(projectList[0])
 
   } catch (err) {
     console.log(red(err));
