@@ -18,7 +18,7 @@ The requirements below are broken into separate **tiers**, which model the way w
 
 #### Backend
 
-- [ ] Write a route to serve up all robots
+- [x] Write a route to serve up all robots
 - [ ] Write a route to serve up all projects
 
 - Write a `robots` model with the following information:
@@ -35,7 +35,7 @@ The requirements below are broken into separate **tiers**, which model the way w
 - [x] Robots may be associated with many projects. Likewise, projects may be associated with many robots.
 
 #### Seed
-- [ ] Running the seed file creates projects and robots for demonstration purposes
+- [x] Running the seed file creates projects and robots for demonstration purposes
 
 Congrats! You have completed your first vertical slice! Make sure to `commit -m "Feature: Get all robots and projects"` before moving on (see RUBRIC.md - points are awarded/deducted for a proper git workflow)!
 

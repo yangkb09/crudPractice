@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const robotsRouter = require('./robots')
 
 // Your routes go here!
 // NOTE: Any routes that you put here are ALREADY mounted on `/api`
@@ -16,6 +17,8 @@ const router = require('express').Router()
 // but you DON'T have a corresponding router, this piece of
 // middleware will generate a 404, and send it to your
 // error-handling endware!
+
+router.use('/robots', robotsRouter)
 
 router.use((req, res, next) => {
   const err = new Error('API route not found!')
